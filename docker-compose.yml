@@ -16,6 +16,7 @@ services:
       - /src/node_modules
   json-server:
     image: clue/json-server
+    container_name: vue-test-client-json-server
     ports:
       - "3000:80"
     volumes:

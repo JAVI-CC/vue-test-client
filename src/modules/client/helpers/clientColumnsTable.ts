@@ -50,6 +50,12 @@ const clientColumnsTable = [
     field: (row: Client) => row.phone,
   },
   {
+    name: 'seeClientDetail',
+    label: 'See client detail',
+    align: 'center',
+    field: (row: Client) => row.id,
+  },
+  {
     name: 'seeProducts',
     label: 'See products',
     align: 'center',

@@ -1,4 +1,5 @@
-import { onActivated, onDeactivated, onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+import { AxiosError } from 'axios';
 import { useProductStore } from '../stores/product.store';
 import { storeToRefs } from 'pinia';
 import { api } from 'src/boot/axios';
@@ -9,21 +10,19 @@ export const useProduct = (customerId: string) => {
   const { products } = storeToRefs(productStore);
   const isLoading = ref<boolean>(true);
   const isShowDialog = ref<boolean>(true);
-
+  const messageErrorFetch = ref<string>('');
 
   const getProducts = async (): Promise<void> => {
     try {
       const { data } = await api.get<ProductDirectlyBackend[]>(`/products?customerId=${customerId}`);
       productStore.addProducts(data);
     } catch (error) {
-      console.error(error);
+      const { message } = error as AxiosError;
+      messageErrorFetch.value = message;
     } finally {
     }
-
-    isLoading.value = false;
   };
 
-  
   onMounted(async () => {
     await getProducts();
     isLoading.value = false;
@@ -40,6 +39,7 @@ export const useProduct = (customerId: string) => {
     products,
     isLoading,
     isShowDialog,
+    messageErrorFetch,
 
     // Methods
   };

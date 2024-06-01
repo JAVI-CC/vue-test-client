@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
-import type { Client, ClientDirectlyBackend, ClientTableColumns, ClientTableFilter } from '../interfaces';
+import type { Client, ClientDirectlyBackend, ClientTableFilter } from '../interfaces';
 import { sanitizeString } from 'src/modules/common/helpers';
 
 export const useClientStore = defineStore('client', () => {
@@ -11,6 +11,7 @@ export const useClientStore = defineStore('client', () => {
     sortBy: 'id',
     isDescending: false,
   });
+  const clientDetailSelected = ref<Client | null>(null);
   //End States
 
   //Getters
@@ -30,6 +31,7 @@ export const useClientStore = defineStore('client', () => {
   );
 
   const isLoading = computed<boolean>(() => !!!clients.value.length);
+
   const tableFilterSanitize = computed<string>(() => sanitizeString(tableFilter.value.filter));
 
   const clientsFilter = computed<Client[]>(() => {
@@ -45,7 +47,6 @@ export const useClientStore = defineStore('client', () => {
     //ASC or DESC
     return tableFilter.value.isDescending ? clientsFilterSort.reverse() : clientsFilterSort;
   });
-
   //End Getters
 
   //Actions
@@ -78,6 +79,7 @@ export const useClientStore = defineStore('client', () => {
     clients,
     clientsFilter,
     isLoading,
+    clientDetailSelected,
 
     //Actions
     addClients,

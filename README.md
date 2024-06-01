@@ -1,4 +1,4 @@
-# Vue list clients (vue-test-clients)
+# Vue test clients (vue-test-clients)
 
 Vue test list clients
 
@@ -30,10 +30,13 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-
 <h4>Containers:</h4>
 <ul>
 <li><span>nginx:alpine3.18</span> - <code>:9000->9000/tcp</code></li>
+<li><span>clue/json-server:latest</span> - <code>:3000->80/tcp</code></li>
 </ul>
 
 <h4>Containers structure:</h4>
-<div class="highlight highlight-source-shell"><pre>├── vue-test-client-app
+<div class="highlight highlight-source-shell"><pre>
+├── vue-test-client-app
+└── vue-test-client-json-server
 </pre></div>
 
 <h4>Setup</h4>

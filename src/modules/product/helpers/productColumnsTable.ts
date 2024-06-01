@@ -1,53 +1,42 @@
-import type { Product } from '../interfaces';
+import type { ProductTableColumns } from '../interfaces';
 
-const productColumnsTable = [
+interface ProductColumns {
+  key: ProductTableColumns
+  label: string;
+}
+
+const productColumnsTable: ProductColumns[] = [
   {
-    name: 'id',
+    key: 'id',
     label: 'Identifier',
-    align: 'left',
-    field: (row: Product) => row.id,
   },
   {
-    name: 'productName',
+    key: 'productName',
     label: 'Product name',
-    align: 'left',
-    field: (row: Product) => row.productName,
   },
   {
-    name: 'mbSpeed',
+    key: 'mbSpeed',
     label: 'MB Speed',
-    align: 'center',
-    field: (row: Product) => row.mbSpeed,
   },
   {
-    name: 'gbData',
+    key: 'gbData',
     label: 'GB Data',
-    align: 'center',
-    field: (row: Product) => row.gbData,
   },
   {
-    name: 'productTypeName',
+    key: 'productTypeName',
     label: 'Product type name',
-    align: 'center',
-    field: (row: Product) => row.productTypeName,
   },
   {
-    name: 'terminalNumbering',
+    key: 'terminalNumbering',
     label: 'Terminal numbering',
-    align: 'center',
-    field: (row: Product) => row.terminalNumbering,
   },
   {
-    name: 'soldAt',
+    key: 'soldAt',
     label: 'Sold At',
-    align: 'left',
-    field: (row: Product) => row.soldAt,
   },
   {
-    name: 'customerId',
+    key: 'customerId',
     label: 'Customer ID',
-    align: 'left',
-    field: (row: Product) => row.customerId,
   },
 ];
 
