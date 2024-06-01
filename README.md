@@ -41,7 +41,7 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-
 
 <h4>Setup</h4>
 <pre>
-<code>$ git clone https://github.com/JAVI-CC1/vue-test-client.git
+<code>$ git clone https://github.com/JAVI-CC/vue-test-client.git
 $ cd vue-test-client
 $ cp .env.template .env.dev
 $ cp .env.template .env.prod</code>

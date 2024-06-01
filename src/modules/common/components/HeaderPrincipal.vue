@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import HeaderButtonTranslate from './HeaderButtonTranslate.vue';
 
-const gitHubUrl: string = 'https://github.com/JAVI-CC1/vue-test-client';
+const gitHubUrl: string = 'https://github.com/JAVI-CC/vue-test-client';
 </script>
 
 <template>
