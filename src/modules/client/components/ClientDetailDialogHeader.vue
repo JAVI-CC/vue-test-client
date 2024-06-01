@@ -16,7 +16,7 @@ defineProps<Props>();
     <q-item-section>
       <q-item-label class="text-body1" lines="1">{{ givenName }}</q-item-label>
       <q-item-label class="text-subtitle text-caption text-weight-bold" lines="1">
-        Identifier: {{ customerId }}
+        {{ $t('Identifier') }}: {{ customerId }}
       </q-item-label>
     </q-item-section>
 

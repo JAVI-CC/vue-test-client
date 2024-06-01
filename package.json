@@ -2,7 +2,7 @@
   "name": "vue-test-clients",
   "version": "0.0.1",
   "description": "Vue test list clients",
-  "productName": "Vue test clients",
+  "productName": "Vue test client",
   "author": "JAVI-CC",
   "private": true,
   "scripts": {

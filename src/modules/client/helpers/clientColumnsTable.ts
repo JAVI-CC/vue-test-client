@@ -1,66 +1,68 @@
+import { i18n } from 'src/boot/i18n';
 import type { Client } from '../interfaces';
+import { computed } from 'vue';
 
-const clientColumnsTable = [
+const clientColumnsTable = computed(() => [
   {
     name: 'id',
-    label: 'Identifier',
+    label: i18n.global.t('Identifier'),
     align: 'left',
     field: (row: Client) => row.id,
   },
   {
     name: 'docType',
-    label: 'Document type',
+    label: i18n.global.t('Document type'),
     align: 'left',
     field: (row: Client) => row.docType,
   },
   {
     name: 'docNum',
-    label: 'Document number',
+    label: i18n.global.t('Document number'),
     align: 'left',
     field: (row: Client) => row.docNum,
   },
   {
     name: 'email',
-    label: 'Email',
+    label: i18n.global.t('Email'),
     align: 'left',
     field: (row: Client) => row.email,
   },
   {
     name: 'customerId',
-    label: 'Client ID',
+    label: i18n.global.t('Client ID'),
     align: 'left',
     field: (row: Client) => row.customerId,
   },
   {
     name: 'givenName',
-    label: 'Name',
+    label: i18n.global.t('Name'),
     align: 'left',
     field: (row: Client) => row.givenName,
   },
   {
     name: 'familyName1',
-    label: 'Family name 1',
+    label: i18n.global.t('Family name 1'),
     align: 'left',
     field: (row: Client) => row.familyName1,
   },
   {
     name: 'phone',
-    label: 'Phone',
+    label: i18n.global.t('Phone'),
     align: 'left',
     field: (row: Client) => row.phone,
   },
   {
     name: 'seeClientDetail',
-    label: 'See client detail',
+    label: i18n.global.t('See client detail'),
     align: 'center',
     field: (row: Client) => row.id,
   },
   {
     name: 'seeProducts',
-    label: 'See products',
+    label: i18n.global.t('See products'),
     align: 'center',
     field: (row: Client) => row.customerId,
   },
-];
+]);
 
-export  {clientColumnsTable}
+export { clientColumnsTable };

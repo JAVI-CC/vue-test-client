@@ -13,20 +13,21 @@ const { clientsFilter, isLoading, messageErrorFetch, tableFilter, clientDetailSe
 
 <template>
   <TableSkeleton v-if="isLoading" />
-  <q-table v-else title="Client list" :rows="clientsFilter" :columns="clientColumnsTable"
+  <q-table v-else :title="$t('Client list')" :rows="clientsFilter" :columns="clientColumnsTable"
     :row-key="ClientEnum.PRIMARY_KEY" hide-bottom :rows-per-page-options="[0]">
     <template #top-right>
 
-      <q-input class="width200 q-mr-md input-margin-bottom" outlined dense v-model="tableFilter.filter" label="Filter">
+      <q-input class="width200 q-mr-md input-margin-bottom" outlined dense v-model="tableFilter.filter"
+        :label="$t('Filter')">
         <template #append>
           <q-icon name="mdi-magnify" />
         </template>
       </q-input>
 
       <q-select class="width200 q-mr-xs input-margin-bottom" outlined dense v-model="tableFilter.sortBy"
-        :options="clientSelectOptions" emit-value map-options label="Sort by column" />
+        :options="clientSelectOptions" emit-value map-options :label="$t('Sort by column')" />
 
-      <q-toggle :label="tableFilter.isDescending ? 'Descending' : 'Ascending'" size="sm" color="primary"
+      <q-toggle :label="tableFilter.isDescending ? $t('Descending') : $t('Ascending')" size="sm" color="primary"
         v-model="tableFilter.isDescending" />
 
     </template>

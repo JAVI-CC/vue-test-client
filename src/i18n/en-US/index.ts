@@ -2,6 +2,33 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  'Client list':'Client list',
+  Document: 'Document',
+  Family: 'Family',
+  Email: 'Email',
+  Phone: 'Phone',
+  Identifier: 'Identifier',
+  'Document type': 'Document type',
+  'Document number': 'Document number',
+  'Client ID': 'Client ID',
+  Name: 'Name',
+  'Family name 1': 'Family name 1',
+  'See client detail': 'See client detail',
+  'See products': 'See products',
+  Filter: 'Filter',
+  'Sort by column': 'Sort by column',
+  Descending: 'Descending',
+  Ascending: 'Ascending',
+  'Internal Server Error': 'Internal Server Error',
+  'List products by customer ID': 'List products by customer ID',
+  'You do not have any products registered!': 'You do not have any products registered!',
+  'Product name': 'Product name',
+  'MB Speed': 'MB Speed',
+  'GB Data': 'GB Data',
+  'Product type name': 'Product type name',
+  'Terminal numbering': 'Terminal numbering',
+  'Sold At': 'Sold At',
+  'Customer ID': 'Customer ID',
+  'English':'English',
+  'Spanish':'Spanish'
 };

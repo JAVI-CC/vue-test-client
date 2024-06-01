@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import HeaderButtonTranslate from './HeaderButtonTranslate.vue';
+
 const gitHubUrl: string = 'https://github.com/JAVI-CC1/vue-test-client';
 </script>
 
@@ -11,6 +13,7 @@ const gitHubUrl: string = 'https://github.com/JAVI-CC1/vue-test-client';
         </q-avatar>
         Vue test client
       </q-toolbar-title>
+      <HeaderButtonTranslate />
       <q-btn flat round padding="xs" icon="mdi-github" :href="gitHubUrl" target="_blank" />
     </q-toolbar>
   </q-header>

@@ -19,9 +19,9 @@ const { products, isLoading, isShowDialog, messageErrorFetch } = useProduct(prop
 
 <template>
   <q-dialog v-if="!!!messageErrorFetch" v-model="isShowDialog" persistent @hide="$emit('close')">
-    <q-card class="q-pb-md" style="max-width: 525x;">
+    <q-card class="q-pb-md" style="max-width: 525px;">
       <q-card-section class="row items-center">
-        <div class="text-h6 text-weight-medium q-mr-xl">List products by customer ID: {{ customerId }}</div>
+        <div class="text-h6 text-weight-medium q-mr-xl">{{ $t('List products by customer ID') }}: {{ customerId }}</div>
         <q-space />
         <q-btn icon="mdi-close" padding="xs" flat round dense v-close-popup />
       </q-card-section>
@@ -34,7 +34,7 @@ const { products, isLoading, isShowDialog, messageErrorFetch } = useProduct(prop
               <template v-for="{ label, key } in productColumnsTable">
                 <q-item>
                   <q-item-section>
-                    <q-item-label class="text-caption text-grey-7 text-weight-medium">{{ label }}</q-item-label>
+                    <q-item-label class="text-caption text-grey-7 text-weight-medium">{{ $t(label) }}</q-item-label>
                     <q-item-label>{{ product[key] }}</q-item-label>
                   </q-item-section>
                 </q-item>
@@ -45,7 +45,7 @@ const { products, isLoading, isShowDialog, messageErrorFetch } = useProduct(prop
       </template>
 
       <template v-else-if="!isLoading && !!!products.length">
-        <div class="q-pa-md text-body1 text-weight-regular">You do not have any products registered!</div>
+        <div class="q-pa-md text-body1 text-weight-regular">{{ $t('You do not have any products registered!') }}</div>
       </template>
     </q-card>
   </q-dialog>

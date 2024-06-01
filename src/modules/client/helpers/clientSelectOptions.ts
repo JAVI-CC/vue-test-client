@@ -1,38 +1,40 @@
+import { i18n } from "src/boot/i18n";
 import { ClientSelectOption } from "../interfaces";
+import { computed } from "vue";
 
-const clientSelectOptions: ClientSelectOption[] = [
+const clientSelectOptions = computed<ClientSelectOption[]>(() => [
   {
-    label: 'Identifier',
+    label: i18n.global.t('Identifier'),
     value: 'id',
   },
   {
-    label: 'Document type',
+    label: i18n.global.t('Document type'),
     value: 'docType',
   },
   {
-    label: 'Document number',
+    label: i18n.global.t('Document number'),
     value: 'docNum',
   },
   {
-    label: 'Email',
+    label: i18n.global.t('Email'),
     value: 'email',
   },
   {
-    label: 'Client ID',
+    label: i18n.global.t('Client ID'),
     value: 'customerId',
   },
   {
-    label: 'Name',
+    label: i18n.global.t('Name'),
     value: 'givenName',
   },
   {
-    label: 'Family name 1',
+    label: i18n.global.t('Family name 1'),
     value: 'familyName1',
   },
   {
-    label: 'Phone',
+    label: i18n.global.t('Phone'),
     value: 'phone',
   },
-];
+]);
 
 export { clientSelectOptions };

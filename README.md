@@ -1,4 +1,4 @@
-# Vue test clients (vue-test-clients)
+# Vue test client (vue-test-client)
 
 Vue test list clients
 

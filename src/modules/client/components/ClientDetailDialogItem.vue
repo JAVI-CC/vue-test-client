@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 
     <q-item-section>
       <q-item-label lines="1">{{ value }}</q-item-label>
-      <q-item-label lines="1" caption>{{ label }}</q-item-label>
+      <q-item-label lines="1" caption>{{ $t(label) }}</q-item-label>
     </q-item-section>
   </q-item>
 
